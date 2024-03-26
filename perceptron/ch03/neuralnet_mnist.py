@@ -12,6 +12,7 @@ from common.functions import softmax
 
 
 def get_data():
+    # x_train：训练图像，t_train：训练标签，x_test：测试图像，t_test：测试标签
     (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, flatten=True, one_hot_label=False)
     return x_test, t_test
 
@@ -39,13 +40,26 @@ def predict(network, x):
 
 
 x, t = get_data()
+print("测试图像大小：", x.shape)
 network_test = init_network()
+w1, w2, w3 = network_test['W1'], network_test['W2'], network_test['W3']
+print("W1: ", w1.shape, "\nW2: ", w2.shape, "\nW3: ", w3.shape)
+
 accuracy_cnt = 0
 for i in range(len(x)):
     y = predict(network_test, x[i])
     p = np.argmax(y)  # 获取概率最高的元素的索引
-    print(p, t[i])
     if p == t[i]:
         accuracy_cnt += 1
 
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
+
+# 批处理
+batch_accuracy_cnt = 0
+batch_size = 100
+for i in range(0, len(x), batch_size):
+    x_batch = x[i:batch_size + i]
+    y_batch = predict(network_test, x_batch)
+    p_batch = np.argmax(y_batch, axis=1)
+    batch_accuracy_cnt += np.sum(p_batch == t[i:batch_size + i])
+print("batch accuracy:" + str(batch_accuracy_cnt / len(x)))
