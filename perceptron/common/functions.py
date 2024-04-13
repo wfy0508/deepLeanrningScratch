@@ -56,3 +56,7 @@ def function_2(x):
         return np.sum(x ** 2)
     else:
         return np.sum(x ** 2, axis=1)
+
+
+def sigmoid_grad(x):
+    return (1.0 - sigmoid(x)) * sigmoid(x)
