@@ -19,7 +19,7 @@ class TwoLayerNet:
 
         # 计算
         a1 = np.dot(x, w1) + b1
-        # 使用sigmod激活函数计算第1层输出
+        # 使用sigmoid激活函数计算第1层输出
         z1 = sigmoid(a1)
         # 第二层输出
         a2 = np.dot(z1, w2) + b2
