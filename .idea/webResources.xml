@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/perceptron/common" />
+            <path value="file://$PROJECT_DIR$/summer/dataset" />
           </resourceRoots>
         </entryData>
       </entry>

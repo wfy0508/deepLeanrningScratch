@@ -1,5 +1,5 @@
 # coding: utf-8
-from perceptron.ch05.layer_naive import MulLayer
+from summer.ch05.layer_naive import MulLayer
 
 apple = 100
 num = 2

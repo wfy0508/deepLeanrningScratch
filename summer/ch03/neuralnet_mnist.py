@@ -6,9 +6,9 @@ sys.path.append(os.pardir)
 
 import numpy as np
 import pickle
-from dataset.mnist import load_mnist
-from common.functions import sigmoid
-from common.functions import softmax
+from summer.dataset.mnist import load_mnist
+from summer.common.functions import sigmoid
+from summer.common.functions import softmax
 
 
 def get_data():
@@ -42,8 +42,8 @@ def predict(network, x):
 x, t = get_data()
 print("测试图像大小：", x.shape)
 network_test = init_network()
-w1, w2, w3 = network_test['W1'], network_test['W2'], network_test['W3']
-print("W1: ", w1.shape, "\nW2: ", w2.shape, "\nW3: ", w3.shape)
+W1, W2, W3 = network_test['W1'], network_test['W2'], network_test['W3']
+print("W1: ", W1.shape, "\nW2: ", W2.shape, "\nW3: ", W3.shape)
 
 accuracy_cnt = 0
 for i in range(len(x)):

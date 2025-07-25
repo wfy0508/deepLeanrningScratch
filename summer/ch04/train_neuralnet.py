@@ -1,5 +1,5 @@
 import numpy as np
-from perceptron.dataset.mnist import load_mnist
+from summer.dataset.mnist import load_mnist
 from two_layer_net import TwoLayerNet
 import matplotlib.pyplot as plt
 

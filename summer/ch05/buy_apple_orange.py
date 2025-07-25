@@ -1,5 +1,5 @@
 # coding: utf-8
-from perceptron.ch05.layer_naive import MulLayer, AddLayer
+from summer.ch05.layer_naive import MulLayer, AddLayer
 
 apple = 100
 orange = 150

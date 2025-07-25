@@ -1,6 +1,6 @@
 import numpy as np
-from perceptron.common.functions import *
-from perceptron.common.gradients import numerical_gradient
+from summer.common.functions import *
+from summer.common.gradients import numerical_gradient
 
 
 class TwoLayerNet:

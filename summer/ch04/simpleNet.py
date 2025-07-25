@@ -1,7 +1,7 @@
 import numpy as np
 
-from perceptron.common.functions import softmax, cross_entropy_error
-from perceptron.common.gradients import numerical_gradient, numerical_gradient_no_batch
+from summer.common.functions import softmax, cross_entropy_error
+from summer.common.gradients import numerical_gradient, numerical_gradient_no_batch
 
 
 class SimpleNet:
